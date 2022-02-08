@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Forest Fire Prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+
+  <style>
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+
+#btn-large waves-effect waves-light green{
+background: #313333;
+}
+#container2{
+  border-radius: 25px;
+  background: #313333;
+  padding: 20px;
+
+}
+</style>
+</head>
+
+<body>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 >Forest Fire Prevention</h1>
+
+      <div id="container2">
+
+
+     <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+          <label for="first_name"><b>FFMC</b></label>
+          <br>
+          <input placeholder="FFMC Index 18.7-96.20 in FWI system" name="FFMC" id="last_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+          <label for="last_name"><b>DMC</b></label>
+          <br>
+          <input id="last_name" name="DMC" placeholder="DMC Index 1.1-291.3 in FWI system"  type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+          <label for="last_name"><b>DC</b></label>
+          <br>
+          <input id="last_name" name="DC" placeholder="DC Index 7.9-860.6 in FWI system"  type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+          <label for="last_name"><b>ISI</b></label>
+          <br>
+          <input id="last_name" name="ISI" placeholder="ISI Index 0.0-56.10 in FWI system"  type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+          <label for="last_name"><b>Temperature</b></label>
+          <br>
+          <input id="last_name" name="Temperature" placeholder="2.2-33.30 degrees Celcius"  type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+          <label for="_name"><b>RH</b></label>
+          <br>
+          <input id="_name" name="RH%" placeholder="RH% 15.0-100.0" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+          <label for="_name"><b>Wind</b></label>
+          <br>
+          <input id="_name" name="Wind km/hr" placeholder="Wind km/hr 0.49-9.40" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+          <label for="_name"><b>Rain</b></label>
+          <br>
+          <input id="_name" name="Rain" placeholder="Rain mm/m2 0.0-6.4" type="text" class="validate">
+        </div>
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" id="btn-large waves-effect waves-light green">Predict </button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+        {{pred}}<br>
+
+    </div>
+
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
