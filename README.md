@@ -1,3 +1,3 @@
 # forestfire-prediction
 
-![plot](./directory_1/directory_2/.../directory_n/plot.png)
+![plot](https://github.com/masonrahmani/forestfire-prediction/blob/main/forest%20fire%20prevention.png)
